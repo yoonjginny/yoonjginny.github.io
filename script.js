@@ -1,11 +1,23 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const greetButton = document.getElementById('greetButton');
-    const greetingMessage = document.getElementById('greetingMessage');
-    const greetings = ["만나서 반갑습니다!", "오늘 하루도 긍정적으로!", "항상 응원합니다!", "좋은 에너지 가득한 하루 되세요!"];
-    let greetingIndex = 0;
+    const followButton = document.getElementById('followButton');
+    const modalOverlay = document.getElementById('modalOverlay');
+    const closeModalButton = document.getElementById('closeModal');
 
-    greetButton.addEventListener('click', function() {
-        greetingIndex = (greetingIndex + 1) % greetings.length;
-        greetingMessage.textContent = greetings[greetingIndex];
-    });
+    if (followButton && modalOverlay && closeModalButton) {
+        followButton.addEventListener('click', function() {
+            modalOverlay.style.display = 'flex'; // 팔로우 모달 보이기
+        });
+
+        closeModalButton.addEventListener('click', function() {
+            modalOverlay.style.display = 'none'; // 팔로우 모달 숨기기
+        });
+
+        // 팔로우 모달 외부 클릭 시 닫기 (선택 사항)
+        modalOverlay.addEventListener('click', function(event) {
+            if (event.target === modalOverlay) {
+                modalOverlay.style.display = 'none';
+            }
+        });
+    }
+    // 사진 모달 관련 JavaScript는 index.html에 직접 추가했습니다.
 });
