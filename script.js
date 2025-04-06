@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const greetButton = document.getElementById('greetButton');
     const greetingMessage = document.getElementById('greetingMessage');
-    const greetings = ["만나서 반갑습니다!", "오늘 하루도 즐거우세요!", "좋은 시간 보내세요!"];
+    const greetings = ["만나서 반갑습니다!", "오늘 하루도 긍정적으로!", "항상 응원합니다!", "좋은 에너지 가득한 하루 되세요!"];
     let greetingIndex = 0;
 
     greetButton.addEventListener('click', function() {
